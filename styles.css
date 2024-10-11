@@ -53,23 +53,6 @@ a:hover::after {
   font-family: "Engraved";
 }
 
-.coffee-counter-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 50px;
-  height: 100vh;
-  font-family: "Aileron", sans-serif;
-  text-align: center;
-  color: #ff8c42;
-}
-
-.counter {
-  font-size: 3rem;
-  margin-top: 10px;
-}
-
 #coffee-fill {
   transition: height 1.5s ease;
 }

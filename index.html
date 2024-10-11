@@ -29,7 +29,7 @@
       </div>
     </nav>
     <!-- Hero Section -->
-    <section class="hero text-center pt-20 font-microquake text-4xl">
+    <section class="hero text-center pt-20 font-microquake text-4xl pb-5">
       <h2 class="py-5">
         <span>Hi, I'm</span>
         <span class="font-nexa text-orange text-6xl"> Sam!</span>
@@ -42,25 +42,29 @@
       <p class="py-5 text-xl font-engraved text-gray">Data Whisperer . Logic Wrangler . Coffee Enthusiast</p>
     </section>
 
-    <!-- Animation -->
-    <div class="coffee-counter-wrapper">
-      <svg id="coffee-cup" width="120" height="120" viewBox="0 0 100 100">
-        <!-- Coffee cup body -->
-        <rect x="25" y="40" width="50" height="40" rx="8" ry="8" stroke="#1A1A1A" stroke-width="3" fill="none" />
-        <!-- Handle -->
-        <circle cx="78" cy="60" r="10" stroke="#1A1A1A" stroke-width="3" fill="none"/>
-        <!-- Coffee fill -->
-        <rect id="coffee-fill" x="25" y="80" width="50" height="0" fill="#FF8C42"/>
-        <!-- Coffee cup base -->
-        <line x1="20" y1="80" x2="80" y2="80" stroke="#1A1A1A" stroke-width="3" />
-        <!-- Steam -->
-        <line class="steam" x1="35" y1="40" x2="35" y2="30" />
-        <line class="steam" x1="50" y1="40" x2="50" y2="25" />
-        <line class="steam" x1="65" y1="40" x2="65" y2="30" />
-      </svg>
-      <span id="coffee-counter" class="counter">1864</span>
-      <p>Cups of Coffee Consumed While Coding</p>
-    </div>
+  <!-- Animation -->
+  <div class="coffee-counter-wrapper flex flex-col items-center justify-start pt-20 h-screen text-center">
+    <svg id="coffee-cup" width="120" height="120" viewBox="0 0 100 100">
+      <!-- Coffee cup body -->
+      <rect x="25" y="40" width="50" height="40" rx="8" ry="8" stroke="#1A1A1A" stroke-width="3" fill="none" />
+      <!-- Handle -->
+      <circle cx="78" cy="60" r="10" stroke="#1A1A1A" stroke-width="3" fill="none"/>
+      <!-- Coffee fill -->
+      <rect id="coffee-fill" x="25" y="80" width="50" height="0" fill="#FF8C42"/>
+      <!-- Coffee cup base -->
+      <line x1="20" y1="80" x2="80" y2="80" stroke="#1A1A1A" stroke-width="3" />
+      <!-- Steam -->
+      <line class="steam" x1="35" y1="40" x2="35" y2="30" />
+      <line class="steam" x1="50" y1="40" x2="50" y2="25" />
+      <line class="steam" x1="65" y1="40" x2="65" y2="30" />
+    </svg>
+    <span id="coffee-counter" class="counter text-4xl mt-2 font-engraved text-orange">1864</span>
+    <p class="font-microquake text-xl">
+      <span>Cups of</span>
+      <span class="font-nexa text-orange">Coffee</span>
+      <span>Consumed While Coding</span>
+    </p>
+</div>
       
     <script src="script.js"></script>
   </body>
