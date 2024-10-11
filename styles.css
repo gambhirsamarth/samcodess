@@ -52,3 +52,42 @@ a:hover::after {
 .font-engraved {
   font-family: "Engraved";
 }
+
+.coffee-counter-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 50px;
+  height: 100vh;
+  font-family: "Aileron", sans-serif;
+  text-align: center;
+  color: #ff8c42;
+}
+
+.counter {
+  font-size: 3rem;
+  margin-top: 10px;
+}
+
+#coffee-fill {
+  transition: height 1.5s ease;
+}
+
+.steam {
+  stroke: #ff8c42;
+  stroke-width: 2;
+  opacity: 0;
+  animation: rise 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}

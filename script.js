@@ -10,3 +10,10 @@ tailwind.config = {
     },
   },
 };
+
+const coffeeCounter = document.getElementById("coffee-counter");
+
+function incrementCoffeeCounter() {
+  coffeeCounter.innerText = parseInt(coffeeCounter.innerText) + 1;
+}
+setInterval(incrementCoffeeCounter, 43200000);
