@@ -52,25 +52,3 @@ a:hover::after {
 .font-engraved {
   font-family: "Engraved";
 }
-
-#coffee-fill {
-  transition: height 1.5s ease;
-}
-
-.steam {
-  stroke: #ff8c42;
-  stroke-width: 2;
-  opacity: 0;
-  animation: rise 2.5s ease-in-out infinite alternate;
-}
-
-@keyframes rise {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(-10px);
-  }
-}
