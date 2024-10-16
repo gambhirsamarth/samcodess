@@ -2,51 +2,346 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="robots" content="index, follow" />
+
+    <meta
+      name="description"
+      content="Welcome to Sam Codess, my developer portfolio. I'm a Java Backend Engineer with professional experience and a passion for writing about tech. Discover my work experience, read my tech blog, and feel free to reach out for collaborations or inquiries."
+    />
+
+    <!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="Sam Codess - Samarth Gambhir's Portfolio">
+<meta itemprop="description" content="Welcome to Sam Codess, my developer portfolio. I'm a Java Backend Engineer with professional experience and a passion for writing about tech. Discover my work experience, read my tech blog, and feel free to reach out for collaborations or inquiries.">
+
+
+<!-- Reference screenshot of updated site's header in place of content -->
+<meta itemprop="image" content="assets/images/sharing-card.png">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://ossportfolio.netlify.app">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Syed Mohsin's Portfolio">
+<meta property="og:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+
+<!-- Reference screenshot of updated site's header in content -->
+<meta property="og:image" content="assets/images/sharing-card.png">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Syed Mohsin's Portfolio">
+<meta name="twitter:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+
+<!-- Reference screenshot of updated site's header in content -->
+<meta name="twitter:image" content="assets/images/sharing-card.png">
+
+
+<!-- Update favicon href attribute with image of yourself -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicons.png"
+      type="image/png"
+    />
+
+    <!-- Preloading fonts for better performance -->
+
+    <link
+      rel="preload"
+      href="assets/fonts/Mona-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="style.css"  />
+    <script src="script.js" defer></script>
+
+    <title>Sam Codess - Samarth Gambhir's Portfolio</title>
   </head>
-  <body class="bg-light text-charcoal">
-    <!-- Navbar -->
-    <nav class="border-b border-gray p-4 font-engraved">
-      <div class="container mx-auto flex justify-evenly items-center">
-        <ul class="flex space-x-4 w-full justify-evenly">
-          <li>
-            <a href="#about" class="relative inline-block text-3xl">About</a>
-          </li>
-          <li>
-            <a href="#projects" class="relative inline-block text-3xl"
-              >Projects</a
-            >
-          </li>
-          <li>
-            <a href="#skills" class="relative inline-block text-3xl">Skills</a>
-          </li>
-          <li>
-            <a href="#contact" class="relative inline-block text-3xl">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- Hero Section -->
-    <section class="hero text-center pt-20 font-microquake text-4xl">
-      <h2 class="py-5">
-        <span>Hi, I'm</span>
-        <span class="font-nexa text-orange text-6xl"> Sam!</span>
-      </h2>
-      <h1 class="py-5">
-        <span>crafting the invisible</span>
-        <span class="font-nexa text-6xl text-orange">Backend Solutions</span>
-        <span>that empower</span>
-      </h1>
-      <p class="py-5 text-xl font-engraved text-gray">Data Whisperer . Logic Wrangler . Coffee Enthusiast</p>
-    </section>
-      <!--Avatar-->
-      <div class="flex items-center justify-center pt-20">
-        <div class="bitmoji-container w-48 h-48 rounded-full flex items-center justify-center shadow-lg shadow-gray">
-            <img src="stickers/giant coffee.png" alt="My Bitmoji" class="bitmoji w-36 h-36 rounded-full">
+
+  <body>
+
+    <script>
+      const theme = localStorage.getItem("theme") || "dark";
+      document.body.classList.add(theme);
+    </script>
+
+    <header class="header">
+
+      <div class="menu-btn-container">
+        <div class="container">
+          <button type="button"  class="menu-btn">Menu</button>
         </div>
-    </div>
-    <script src="script.js"></script>
+      </div>
+
+      <nav class="nav hidden">
+        <ol class="nav-items">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#work">My Work</a></li>
+          <li class="nav-item"><a href="#blog">See Blog</a></li>
+          <li class="nav-item"><a href="#skills">My Skills</a></li>
+          <li class="nav-item">
+            <a href="#contact" data-focused="last-focused">Contact</a>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="container">
+        <div class="header-textbox">
+          <!-- Replace with your name and job title -->
+          <h1 class="h1">
+            <span>Hi, I'm Samarth Gambhir</span>
+            <span>Backend Web Developer</span>
+          </h1>
+
+          <!-- Add a small introductory paragraph about yourself -->
+          <p class="header-text">
+            I’m a Java Backend Engineer who loves turning caffeine into clean, scalable code. Whether it’s optimizing systems or writing tech blogs, I’m all about keeping it simple, efficient, and fun. Let’s build something awesome together!
+          </p>
+          
+
+          <div class="header-btns">
+            <a href="#contact" class="btn btn-cta">Hire me</a>
+            <a href="#work" class="btn btn-secondary">See my work</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="work">
+        <div class="container">
+          <h2 class="h2" id="work">Selected Work</h2>
+          <div class="work-boxes">
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Kapture Dashboard</h3>
+                <p class="work-text">
+                  A dashboard which presents data in form of table with feature to download as excel.
+                </p>
+                <ol class="work-technologies">
+                  <li>Java</li>
+                  <li>Spring Boot</li>
+                  <li>MySQL</li>
+                  <li>JSP</li>
+                </ol>
+
+                <!-- <div class="work-links"> -->
+                  <!-- Add url of project in href attribute -->
+                  <!-- <a href="https://github.com/devsyedmohsin" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  > -->
+
+                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <!-- <a
+                    href="https://github.com/devsyedmohsin"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div> -->
+              </div>
+
+         <!-- Update img src and alt attribute  -->
+
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/dashboard.png"
+                  alt="Kapture Dashboard"
+                />
+              </picture>
+            </div>
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">AWS S3 Uploader</h3>
+                <p class="work-text">A feature that empowers clients to choose between uploading files to their own S3 storage or Kapture's S3, providing greater flexibility in file management.</p>
+                <ol class="work-technologies">
+                  <li>Java</li>
+                  <li>Spring Boot</li>
+                  <li>AWS Java SDK</li>
+                </ol>
+              </div>
+         <!-- Update img src and alt attribute  -->
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/s3.png"
+                  alt="S3 Uploader"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="article">
+        <div class="container">
+          <h2 class="h2" id="blog">My Articles</h2>
+          <div class="article-boxes">
+            <article class="article-box featured-article">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h3">
+                    Why Java Doesn’t Support Multiple Inheritance: A Simplified Explanation
+                  </h3>
+                  <p class="article-text">
+                    This article delves into the technical reasons behind Java’s design choice to avoid multiple inheritance, 
+                    focusing on the complexity and ambiguity it can introduce, such as the "Diamond Problem." 
+                    It provides a simplified explanation for developers, helping them understand how Java solves this issue through interfaces and single inheritance
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a href="https://dev.to/gambhirsamarth/" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                </div>
+              </div>
+              <picture class="article-illustration">
+                <img
+                  src="assets/images/featured-blog.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </picture>
+            </article>
+            <!-- <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">JavaScript Default Function Parameters.</h3>
+                  <p class="article-text">
+                    In JavaScript when we call a function which expects some
+                    data to be passed in if you call that without passing
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a href="https://dev.to/devsyedmohsin" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                  <span class="reaction-count">
+                    <img
+                      src="./assets/images/heart-outline.svg"
+                      alt="heart"
+                      loading="lazy"
+                    />
+                    47
+                  </span>
+                </div>
+              </div>
+            </article> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="skills">
+        <div class="container">
+          <h2 class="h2" id="skills">My Toolkit</h2>
+          <div class="skills-imgs">
+                <img src="assets/images/skills/java.png" alt="Java" class="skills-img" loading="lazy" title="Java">
+                <img src="assets/images/skills/springboot.png" alt="Spring Boot" class="skills-img" loading="lazy" title="Spring Boot">
+                 <img src="assets/images/skills/mysql.png" alt="MySql" class="skills-img" loading="lazy" title="MySql">
+                 <img src="assets/images/skills/redis.png" alt="Redis" class="skills-img" loading="lazy" title="Redis">
+                 <img src="assets/images/skills/hibernate.svg" alt="Hibernate" class="skills-img" loading="lazy" title="Hibernate">
+                 <img src="assets/images/skills/tailwind.svg" alt="TailWind" class="skills-img" loading="lazy" title="TailWind">
+                 <img src="assets/images/skills/postman.svg" alt="Postman" class="skills-img" loading="lazy" title="Postman">
+                 <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
+                 <img src="assets/images/skills/html.webp" alt="CSS" class="skills-img" loading="lazy" title="CSS">
+                 <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="container">
+          <h2 class="h2" id="contact">Send Message</h2>
+          <div class="contact-content">
+            <div class="contact-textbox">
+              <!-- Please comment this component if you're not available for hire -->
+              <!-- <strong href="#" class="hire-alert">
+                <span class="indicator"></span>
+                Available for hire
+              </strong> -->
+              <p class="contact-text">
+                As a backend developer with a passion for Java and software design,
+                I focus on building efficient systems that enhance user experience. 
+                I enjoy tackling complex problems and turning innovative ideas into practical solutions.
+              </p>
+              <p class="contact-text">
+                I have a growing interest in UI design and am actively seeking opportunities to learn more about creating visually appealing and user-friendly interfaces.
+              </p>
+            </div>
+            <form action="#" class="contact-form" netlify>
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required autocomplete="off"/>
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  inputmode="email"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="form-field">
+                <label for="message">How can I help you?</label>
+                <textarea name="message" id="message" required autocomplete="off"></textarea>
+              </div>
+              <button type="submit" class="btn btn-cta">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Update href and src attributes -->
+          <nav>
+            <ol class="footer-links">
+              <li class="footer-link">
+                <a title="GitHub" href="https://github.com/gambhirsamarth" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/github.svg"
+                    alt="GitHub"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Linkedin" href="https://www.linkedin.com/in/gambhirsamarth/" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/linkedin.svg"
+                    alt="Linkedin"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Twitter" href="https://x.com/samcodess" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/twitter.svg"
+                    alt="Twitter"
+                /></a>
+              </li>
+            </ol>
+          </nav>
+          <label class="theme-switch" for="theme-switch">
+            <span>Dark Theme</span>
+            <input type="checkbox" id="theme-switch" role="switch"/>
+          </label>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
