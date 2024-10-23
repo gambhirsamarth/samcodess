@@ -56,6 +56,15 @@
 
     <link rel="stylesheet" href="style.css"  />
     <script src="script.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+          emailjs.init({
+            publicKey: "4CrTGI0jcV2WfPRbm",
+          });
+      })();
+      console.log("EmailJs initialized")
+  </script>
 
     <title>Sam Codess - Samarth Gambhir's Portfolio</title>
   </head>
@@ -288,17 +297,17 @@
                 I have a growing interest in UI design and am actively seeking opportunities to learn more about creating visually appealing and user-friendly interfaces.
               </p>
             </div>
-            <form action="mailto:gambhirsamarth@gmail.com" method="post" enctype="text/plain" class="contact-form">
+            <form id="contact-form" class="contact-form">
               <div class="form-field">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required autocomplete="off"/>
+                <label for="from-name">Name</label>
+                <input type="text" name="from-name" id="from-name" required autocomplete="off" />
               </div>
               <div class="form-field">
-                <label for="email">Email</label>
+                <label for="from-email">Email</label>
                 <input
                   type="email"
-                  name="email"
-                  id="email"
+                  name="from-email"
+                  id="from-email"
                   required
                   inputmode="email"
                   autocomplete="off"

@@ -1,3 +1,24 @@
+window.onload = function() {
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = new FormData(event.target);
+      console.log(formData);
+
+      // Create a template parameters object
+      const templateParams = {
+          name: formData.get('from-name'),
+          email: formData.get('from-email'),
+          message: formData.get('message')
+      };
+      emailjs.send('service_t8nsjaa', 'template_up1kzao', templateParams)
+          .then(() => {
+              console.log('SUCCESS!');
+          }, (error) => {
+              console.log('FAILED...', error);
+          });
+  });
+}
+
 const nav = document.querySelector(".nav");
 const navMenu = document.querySelector(".nav-items");
 const btnToggleNav = document.querySelector(".menu-btn");
